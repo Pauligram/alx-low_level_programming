@@ -18,15 +18,15 @@ size_t list_len(const list_t *h)
 	{
 		if (h->str == NULL)
 		{
-			printf("[%u] %s\n", (unsigned int)h->len, "(nil)");
+			printf("[%lu] %s\n", h->len, "(nil)");
 		}
 
 		else
 		{
-			printf("[%u] %s\n", (unsigned int)h->len, h->str);
+			printf("[%lu] %s\n", h->len, h->str);
 		}
 		h = h->next;
 	}
-	printf("[%u] %s\n", (unsigned int)h->len, "(nil)");
+	printf("[%lu] %s\n", h->len, "(nil)");
 	return (i);
 }
