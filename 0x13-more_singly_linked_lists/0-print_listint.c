@@ -1,5 +1,5 @@
 #include "lists.h"
-#include <stdio.h>
+
 /*
  * print_listint - prints all the elements of a list listint_t
  * @h: head of a list
@@ -7,14 +7,14 @@
  */
 size_t print_listint(const listint_t *h)
 {
-	size_t pgnodes = 0;
 	const listint_t *no = h;
+	size_t pgnodes = 0;
 
-	while (h)
+	while (no)
 	{
-		pgnodes++;
 		printf("%d\n", no->n);
-		no = h->next;
+		pgnodes++;
+		no = no->next;
 	}
 	return (pgnodes);
 }
