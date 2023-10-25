@@ -9,14 +9,13 @@
 size_t print_listint_safe(const listint_t *head)
 {
 	size_t play = 0;
-	const listint_t *aux_node = head;
-
-	if(!head)
+	const listint_t *node = head;	
+	if (!head)
 		exit(98);
-	while (aux_node)
+	while (node)
 	{
-		printf("[%p] %i\n", (void *)aux_node,aux_node->n);
-		aux_node = aux_node->next;
+		printf("[%p] %d\n", (void *)node, node->n);
+		node = node->next;
 		play++;
 	}
 	return (play);
