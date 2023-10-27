@@ -6,7 +6,7 @@
  * @m: another.
  * Return: number
  */
-unsigned int flip_bits(unsigned long int n, unsigned long int m);
+unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
 	int paul = (sizeof(n) * 8);
 	int gbeke = 0;
