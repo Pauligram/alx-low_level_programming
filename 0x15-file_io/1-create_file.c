@@ -7,20 +7,21 @@
  * Return: 1
  */
 
-int append_text_to_file(const char *filename, char *_content)
+int append_text_to_file(const char *filename, char *m_content)
 {
-	int fd, length = 0;
+	int fd = 0;
+	int length = 0;
 	if (!filename)
 		return (-1);
-	fd = open(filename, 0_RDWR | 0_CREAT | 0_TRUNC, 0600);
+	fd = open(filename, O_RDWR | O_CREAT | O_TRUNC, 0600);
 	if (fd < 0)
 		return (-1);
-while (content && content[length])
+while (m_content && m_content[length])
 	length++;
-if (write(fd, content, length) < 0)
+if (write(fd, m_content, length) < 0)
 {
 	close(fd);
-	return (-1)
+	return (-1);
 }
 close(fd);
 return (1);
